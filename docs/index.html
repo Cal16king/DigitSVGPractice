@@ -3,6 +3,15 @@
     <head>
         <title>Digit 400</title>
         <script type="text/javascript" src="test.js">/**/</script>
+        <style>
+            svg {
+            border: 1px solid black;
+            width: 600px;
+            height: 600px;
+            display: block;
+            margin: 50px auto;
+            }
+        </style>
     </head>
     <body>
         <h1>Sample text</h1>
@@ -12,5 +21,19 @@
             <li>more words</li>
             <li>words again</li>
         </ul>
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="30" fill="purple">
+                <animate attributeName="cx" from="50" to="350" dur="5s" repeatCount="indefinite" />
+                <animate attributeName="r" from="30" to="50" dur="5s" repeatCount="indefinite" />
+            </circle>
+            <rect x="50" y="150" width="60" height="60" fill="blue">
+                <animate attributeName="x" from="50" to="350" dur="5s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="rotate" from="0 75 175" to="360 75 175" dur="5s" repeatCount="indefinite" />
+            </rect>
+            <polygon points="50,300 100,300 75,250" fill="green">
+                <animate attributeName="points" from="50,300 100,300 75,250" to="150,300 200,300 175,250" dur="5s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="scale" from="1" to="3" dur="5s" repeatCount="indefinite" />
+            </polygon>
+        </svg>
     </body>
 </html>
